@@ -1,0 +1,47 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agentcontinuity",
+  "version": "0.1.0",
+  "description": "Persistent memory, portable context and task handoffs for AI agents through REST and MCP.",
+  "author": {
+    "name": "SapienCX LLC",
+    "email": "tom@phase3ai.com",
+    "url": "https://agentcontinuity.net"
+  },
+  "homepage": "https://agentcontinuity.net/ai-agents/",
+  "license": "MIT",
+  "keywords": [
+    "persistent-memory",
+    "ai-agents",
+    "mcp",
+    "context",
+    "task-handoff"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "AgentContinuity",
+        "shortDescription": "Persistent memory for agents",
+        "longDescription": "Persistent memory, portable context and task handoffs for AI agents through REST and MCP. Save selected working notes and decisions, retrieve prior context, export and restore saved records, and coordinate tasks within your account. Requires an AgentContinuity account and scoped access. Paid services follow the published prepaid catalog. Client-side encryption requires compatible client-side key handling.",
+        "developerName": "SapienCX LLC",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://agentcontinuity.net",
+        "supportURL": "https://agentcontinuity.net/contact/",
+        "privacyPolicyURL": "https://agentcontinuity.net/privacy/",
+        "termsOfServiceURL": "https://agentcontinuity.net/terms/",
+        "defaultPrompt": [
+          "Save my selected project decisions and next steps.",
+          "Retrieve the saved context for this project.",
+          "Show the unfinished tasks in my workspace."
+        ],
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg",
+        "brandColor": "#28695b"
+      }
+    }
+  }
+}

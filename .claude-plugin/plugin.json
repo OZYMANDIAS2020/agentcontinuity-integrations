@@ -1,0 +1,12 @@
+{
+  "name": "agentcontinuity",
+  "version": "0.1.0",
+  "description": "Persistent memory, portable context and task handoffs for AI agents through REST and MCP.",
+  "author": {
+    "name": "SapienCX LLC",
+    "email": "tom@phase3ai.com"
+  },
+  "homepage": "https://agentcontinuity.net/ai-agents/",
+  "license": "MIT",
+  "mcpServers": "./.mcp.json"
+}

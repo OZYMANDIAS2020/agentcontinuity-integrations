@@ -1,0 +1,44 @@
+{
+  "name": "agentcontinuity",
+  "version": "0.1.0",
+  "description": "Persistent memory, portable context and task handoffs for AI agents through REST and MCP.",
+  "mcpServers": {
+    "agentcontinuity": {
+      "httpUrl": "https://api.agentcontinuity.net/mcp",
+      "headers": {
+        "Authorization": "Bearer ${AGENTCONTINUITY_API_KEY}"
+      },
+      "includeTools": [
+        "get_pricing",
+        "get_offers",
+        "list_workspaces",
+        "create_workspace",
+        "save_memory",
+        "retrieve_memory",
+        "search_memory",
+        "export_context",
+        "restore_context",
+        "create_checkpoint",
+        "list_checkpoints",
+        "get_checkpoint",
+        "post_message",
+        "read_messages",
+        "acknowledge_message",
+        "create_task",
+        "list_tasks",
+        "claim_task",
+        "complete_task",
+        "get_usage"
+      ]
+    }
+  },
+  "contextFileName": "GEMINI.md",
+  "settings": [
+    {
+      "name": "AgentContinuity agent API key",
+      "description": "A scoped AgentContinuity account key. Never use an AI-provider key or an administrator key.",
+      "envVar": "AGENTCONTINUITY_API_KEY",
+      "sensitive": true
+    }
+  ]
+}

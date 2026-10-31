@@ -1,0 +1,41 @@
+{
+  "as_of": "2026-10-31",
+  "public_mcp_url": "https://api.agentcontinuity.net/mcp",
+  "platforms": {
+    "chatgpt": {
+      "status": "prepared_not_submitted",
+      "blocking_requirements": [
+        "supported OAuth account connection",
+        "publisher and domain verification",
+        "review account and native-client test cases",
+        "walkthrough and policy attestations"
+      ]
+    },
+    "claude": {
+      "status": "prepared_not_submitted",
+      "blocking_requirements": [
+        "OAuth for authenticated directory service",
+        "review account and native-client tool tests",
+        "portal submission and policy attestations"
+      ]
+    },
+    "gemini_cli": {
+      "status": "package_prepared",
+      "requirements": [
+        "public GitHub repository",
+        "root gemini-extension.json",
+        "gemini-cli-extension topic",
+        "gallery validation and crawl"
+      ],
+      "consumer_gemini_listing": false
+    },
+    "grok": {
+      "status": "custom_connection_documented",
+      "public_catalog_submission_route": "not_verified"
+    },
+    "meta_ai": {
+      "status": "research",
+      "public_consumer_directory_submission_route": "not_verified"
+    }
+  }
+}
