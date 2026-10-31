@@ -20,14 +20,16 @@
       ]
     },
     "gemini_cli": {
-      "status": "package_prepared",
+      "status": "public_repository_and_discovery_topic_published",
       "requirements": [
         "public GitHub repository",
         "root gemini-extension.json",
         "gemini-cli-extension topic",
         "gallery validation and crawl"
       ],
-      "consumer_gemini_listing": false
+      "consumer_gemini_listing": false,
+      "repository": "https://github.com/OZYMANDIAS2020/agentcontinuity-integrations",
+      "gallery_listing_verified": false
     },
     "grok": {
       "status": "custom_connection_documented",
