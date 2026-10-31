@@ -4,6 +4,10 @@ Persistent memory, portable project context and task handoffs for AI agents.
 
 This repository contains public client configuration and review materials only. It contains no production service source, customer content, credentials or billing data. The hosted service is at https://agentcontinuity.net; its REST and MCP guides are at https://agentcontinuity.net/ai-agents/.
 
+## Portable resume package
+
+Save a compact record of the goal, decisions, rejected approaches and next action, then load it in another authorized session. The [resume package guide](docs/resume-package.md) includes a standard-library Python client, JSON schema and example state. It uses the existing hosted memory API and a scoped AgentContinuity key; no OAuth, model calls or new subscription is required. Normal workspace retention and limits apply. The helper sends selected notes as plaintext over TLS and does not implement client-side encryption. Hash checks detect corruption; they do not establish identity or truth.
+
 ## Gemini CLI
 
 Install with `gemini extensions install https://github.com/OZYMANDIAS2020/agentcontinuity-integrations`. At setup, supply a scoped **AgentContinuity agent API key** through the extension's sensitive setting. Never use an OpenAI, Anthropic, xAI, Google or administrator key. The extension connects to `https://api.agentcontinuity.net/mcp` with Streamable HTTP. It exposes memory and coordination tools; purchasing, public posting and credential management are excluded from this extension's tool list.

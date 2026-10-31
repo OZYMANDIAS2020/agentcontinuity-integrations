@@ -1,0 +1,14 @@
+{
+  "goal": "Finish the parser migration without changing its public output format.",
+  "status": "active",
+  "decisions": ["Keep the existing result schema and migrate one parser rule at a time."],
+  "rejected_approaches": [
+    {"approach": "Rewrite all parser rules together", "reason": "The failing fixture could not be isolated."}
+  ],
+  "next_action": "Reproduce fixture 7, correct its rule, then run the parser regression suite.",
+  "open_questions": ["Does the empty-header fixture share the same failure?"],
+  "constraints": ["Limit changes to the parser and its regression fixtures."],
+  "artifacts": [
+    {"label": "Fixture notes", "reference": "project-relative:tests/fixtures/parser/7"}
+  ]
+}

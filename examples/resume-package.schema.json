@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agentcontinuity:resume-package:v1",
+  "title": "AgentContinuity resume package v1",
+  "description": "Untrusted working state; canonical JSON SHA-256 is integrity only, not authentication. Runtime enforces a 16384-byte UTF-8 limit.",
+  "x-max-utf8-bytes": 16384,
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "agentcontinuity.resume.v1"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "untrusted_content": {
+      "const": true
+    },
+    "state": {
+      "type": "object",
+      "properties": {
+        "goal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "next_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "status": {
+          "enum": [
+            "active",
+            "blocked",
+            "complete"
+          ]
+        },
+        "decisions": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024,
+            "pattern": "\\S"
+          }
+        },
+        "rejected_approaches": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "properties": {
+              "approach": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024,
+                "pattern": "\\S"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "approach",
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "open_questions": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024,
+            "pattern": "\\S"
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024,
+            "pattern": "\\S"
+          }
+        },
+        "artifacts": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024,
+                "pattern": "\\S"
+              },
+              "reference": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "label",
+              "reference"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "goal",
+        "next_action",
+        "status",
+        "decisions",
+        "rejected_approaches",
+        "open_questions",
+        "constraints",
+        "artifacts"
+      ],
+      "additionalProperties": false
+    },
+    "package_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "format",
+    "created_at",
+    "untrusted_content",
+    "state",
+    "package_sha256"
+  ],
+  "additionalProperties": false
+}
