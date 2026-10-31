@@ -20,9 +20,13 @@ For consumer Claude or Grok, add the HTTPS MCP URL as a custom connector only wh
 
 The portable `plugin.json` and `mcp.json` are preparation artifacts, not an approved listing. The public endpoint currently requires bearer API keys for private operations. **Public submission is blocked pending a supported OAuth account-connection flow**, portal/domain checks, a dedicated sample reviewer account, native-client tests and required review materials. The portable MCP manifest does not declare the protected service unauthenticated and contains no credentials. `docs/openai-auth.json` records the current fixed-bearer scheme separately because the portable schema and OpenAI overlay have different validation rules. Do not upload this package as a production-ready OAuth integration.
 
-## Grok and Meta AI
+## Gemini app, Meta/Muse and Grok
 
-Grok documents custom MCP connections and a connector catalog, but an open third-party public catalog submission route has not been verified for this release. Meta AI's consumer-directory submission route has not been established. Neither is claimed as listed or approved. Developer/partner integrations must not be described as consumer-app listings.
+Google's Connected Apps Platform provides a preview application and review/publishing route for the Gemini consumer app; this is separate from the Gemini CLI extension above. Meta has a Muse Connector Platform submission portal and a separate Meta AI developer-preview application. No applications or submissions have been sent by this package. Program access and approval are not established.
+
+Grok documents custom MCP connections and a connector catalog, but an open third-party public catalog submission route remains unverified. A custom connection is not a public catalog listing. See `docs/directory-rollout.md` for current routes and remaining work.
+
+OpenAI's directory currently permits access to features in an existing paid account but prohibits selling digital services or credits through plugins. A future ChatGPT connector must expose a focused memory/coordination tool surface without purchase or checkout operations; changing this README or hiding buttons is not server-side enforcement. The current shared MCP endpoint still advertises all 50 service tools and is not ready for that submission.
 
 ## Usage examples
 

@@ -8,7 +8,8 @@
         "supported OAuth account connection",
         "publisher and domain verification",
         "review account and native-client test cases",
-        "walkthrough and policy attestations"
+        "walkthrough and policy attestations",
+        "memory-only server tool exposure; no digital-service sales or checkout through the plugin"
       ]
     },
     "claude": {
@@ -36,8 +37,43 @@
       "public_catalog_submission_route": "not_verified"
     },
     "meta_ai": {
-      "status": "research",
-      "public_consumer_directory_submission_route": "not_verified"
+      "status": "developer_preview_application_route_verified_not_applied",
+      "application_url": "https://dev.meta.ai/products/connectors",
+      "public_discovery": "later_phase_per_current_Meta_AI_preview_FAQ",
+      "listed": false
+    },
+    "gemini_app": {
+      "status": "preview_route_verified_not_applied",
+      "program": "Google Connected Apps Platform",
+      "application_url": "https://connected.google.com/",
+      "requirements": [
+        "preview access and developer account",
+        "domain verification",
+        "supported account linking",
+        "native Gemini tests and review approval"
+      ],
+      "listed": false
+    },
+    "meta_muse": {
+      "status": "submission_portal_verified_not_submitted",
+      "portal_url": "https://platform.muse.ai/",
+      "review_required": true,
+      "authenticated_portal_requirements_verified": false,
+      "listed": false
     }
+  },
+  "last_public_preflight": {
+    "checked_at": "2026-10-31T14:27:39.662418+00:00",
+    "protocol_version": "2025-11-25",
+    "tool_count": 50,
+    "required_tools_present": true,
+    "public_pricing_ok": true,
+    "oauth_protected_resource_http": 404,
+    "oauth_authorization_server_http": 404,
+    "stale_deployed_tool_metadata": [
+      "get_offers"
+    ],
+    "authenticated_round_trip_verified": false,
+    "directory_ready": false
   }
 }

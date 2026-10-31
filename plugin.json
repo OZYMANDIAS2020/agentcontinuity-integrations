@@ -22,7 +22,7 @@
       "interface": {
         "displayName": "AgentContinuity",
         "shortDescription": "Persistent memory for agents",
-        "longDescription": "Persistent memory, portable context and task handoffs for AI agents through REST and MCP. Save selected working notes and decisions, retrieve prior context, export and restore saved records, and coordinate tasks within your account. Requires an AgentContinuity account and scoped access. Paid services follow the published prepaid catalog. Client-side encryption requires compatible client-side key handling.",
+        "longDescription": "Persistent memory, portable context and task handoffs for AI agents through REST and MCP. Save selected working notes and decisions, retrieve prior context, export and restore saved records, and coordinate tasks within your account. Requires an AgentContinuity account and scoped access. Client-side encryption requires compatible client-side key handling.",
         "developerName": "SapienCX LLC",
         "category": "Developer Tools",
         "capabilities": [
