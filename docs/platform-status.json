@@ -1,23 +1,22 @@
 {
-  "as_of": "2026-10-31",
+  "as_of": "2026-11-02",
   "public_mcp_url": "https://api.agentcontinuity.net/mcp",
   "platforms": {
     "chatgpt": {
-      "status": "prepared_not_submitted",
+      "status": "held_pending_oauth",
       "blocking_requirements": [
-        "supported OAuth account connection",
+        "OAuth 2.1 account linking (the portal does not connect a fixed API key)",
         "publisher and domain verification",
+        "memory-only tool surface without billing or checkout tools",
         "review account and native-client test cases",
-        "walkthrough and policy attestations",
-        "memory-only server tool exposure; no digital-service sales or checkout through the plugin"
+        "walkthrough and policy attestations"
       ]
     },
     "claude": {
-      "status": "prepared_not_submitted",
+      "status": "held_pending_oauth",
+      "route": "stand-alone connector directory",
       "blocking_requirements": [
-        "OAuth for authenticated directory service",
-        "review account and native-client tool tests",
-        "portal submission and policy attestations"
+        "per-user OAuth for the authenticated service"
       ]
     },
     "gemini_cli": {
@@ -33,8 +32,12 @@
       "gallery_listing_verified": false
     },
     "grok": {
-      "status": "custom_connection_documented",
-      "public_catalog_submission_route": "not_verified"
+      "status": "catalog_pr_submitted_awaiting_review",
+      "pull_request": "https://github.com/xai-org/plugin-marketplace/pull/1840",
+      "pinned_commit": "58d280da44cb5591ef4f8d26dbe55a68695d542f",
+      "path": "grok",
+      "listed": false,
+      "in_app_test_recorded": false
     },
     "meta_ai": {
       "status": "developer_preview_application_route_verified_not_applied",
@@ -60,6 +63,46 @@
       "review_required": true,
       "authenticated_portal_requirements_verified": false,
       "listed": false
+    },
+    "claude_plugin_directory": {
+      "status": "validated_draft_not_submitted",
+      "path": "claude",
+      "validated_commit": "58d280d",
+      "policy_holds": 0,
+      "remaining": [
+        "publisher Compliance attestations and submit (publisher action)",
+        "Anthropic review"
+      ],
+      "operational_surfaces": [
+        "Claude Code (per-user API key)"
+      ],
+      "oauth_required_surfaces": [
+        "claude.ai",
+        "Cowork"
+      ],
+      "listed": false
+    },
+    "claude_code_marketplace": {
+      "status": "installable_from_this_repository",
+      "install": "/plugin marketplace add OZYMANDIAS2020/agentcontinuity-integrations",
+      "native_client_round_trip_verified": false
+    },
+    "grok_bot": {
+      "status": "held",
+      "form": "https://x.ai/bot/marketplace/submit-a-plugin",
+      "blocking_requirements": [
+        "in-app test actually passed before attesting",
+        "publisher acceptance of xAI Publisher Terms"
+      ]
+    },
+    "kimi": {
+      "status": "prepared_not_submitted",
+      "route": "Kimi Plugin Builder import of this repository (folder claude), then plugin page feedback form: Apply for official marketplace publication",
+      "blocking_requirements": [
+        "publisher Kimi sign-in",
+        "in-app basic test"
+      ],
+      "listed": false
     }
   },
   "last_public_preflight": {
@@ -75,5 +118,14 @@
     ],
     "authenticated_round_trip_verified": false,
     "directory_ready": false
+  },
+  "plugin_source_commit": "58d280da44cb5591ef4f8d26dbe55a68695d542f",
+  "publisher": "SapienCX LLC",
+  "last_authenticated_acceptance": {
+    "checked_at": "2026-11-02T19:16:09Z",
+    "client": "scripted MCP Streamable HTTP client with a synthetic trial account (not a native app)",
+    "core_cases": "15/15 pass",
+    "handoff_cases": "8/8 pass",
+    "tool_count": 55
   }
 }

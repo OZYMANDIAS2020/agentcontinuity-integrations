@@ -37,13 +37,16 @@ consumer-app directory listings.
 
 | Platform | Route | Remaining gate |
 |---|---|---|
-| ChatGPT/Codex | OpenAI Plugins submission portal | OAuth, verified publisher/domain, sample account, native-client checks and review. Portal does not connect a fixed API key. |
-| Claude | https://claude.ai/directory/manage | OAuth for authenticated service, native-client tool tests, private reviewer account and review. Paid Claude plans can submit. |
+| ChatGPT/Codex | OpenAI Plugins submission portal | **Held.** Needs OAuth 2.1 account linking (portal does not connect a fixed API key), verified publisher/domain, a memory-only tool surface without billing or checkout tools, reviewer test account, native-client checks and review. |
+| Claude plugin directory | https://claude.ai/directory/manage/new/plugin (plugin bundle, `claude/`) | **Draft validated, not submitted.** 58d280d passed with 0 policy holds; the remaining step is the publisher's own Compliance attestations (Software Directory Terms, Directory Policy) and the submit button. The connector works in Claude Code; claude.ai and Cowork need OAuth. |
+| Claude connector directory | https://claude.ai/directory/manage (stand-alone connector) | **Held.** Requires per-user OAuth. |
+| Grok Build | https://github.com/xai-org/plugin-marketplace/pull/1840 (`grok/`) | **Submitted, awaiting xAI review.** Pins 58d280d. Catalog validation, index check, Socket and Semgrep pass. |
+| Grok Bot / other surfaces | https://x.ai/bot/marketplace/submit-a-plugin | **Held.** The form attests to local and in-app testing; no in-app Grok session has been run yet. |
+| Kimi | Kimi Plugin Builder (import this repository, folder `claude/`), then the plugin page's "Apply for official marketplace publication" form | **Not submitted.** Requires the publisher's Kimi sign-in and an in-app basic test. |
 | Gemini app | https://connected.google.com/ via Google's Connected Apps preview | Preview access, developer account, domain proof, account linking, tests and Google review before publication. |
 | Meta Muse | https://platform.muse.ai/ | Sign in to inspect the submission, provide technical/review materials and obtain Meta approval. Authenticated portal fields are not yet verified. |
 | Meta AI | https://dev.meta.ai/products/connectors | Apply for limited developer preview. Its FAQ places public discovery in a later phase; this is separate from the Muse route. |
 | Gemini CLI | Public repo, root manifest and gemini-cli-extension topic already published | Gallery crawl/validation and native authenticated round trip remain unverified. |
-| Grok | Custom MCP connector is documented | Public catalog self-service submission route not verified. |
 
 ## ChatGPT commerce boundary
 
