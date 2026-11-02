@@ -16,14 +16,14 @@ The Gemini extension is a developer integration, not a listing in the consumer G
 
 ## Claude Code plugin
 
-This repository root is a Claude plugin (`.claude-plugin/plugin.json`, `.mcp.json`, `skills/`). Install it in Claude Code:
+The `claude/` folder is the Claude plugin (`.claude-plugin/plugin.json`, `.mcp.json`, `skills/`, `README.md`); the root `.claude-plugin/marketplace.json` lists it. Install it in Claude Code:
 
 ```
 /plugin marketplace add OZYMANDIAS2020/agentcontinuity-integrations
 /plugin install agentcontinuity@agentcontinuity
 ```
 
-Then enter **your own** AgentContinuity agent API key when Claude Code asks for the plugin's sensitive "AgentContinuity API key" option; Claude Code keeps it in secure storage and sends it only to `https://api.agentcontinuity.net/mcp` as `Authorization: Bearer …`. No key ships in this repository. Never use a shared team key, an administrator key or an AI-provider key.
+Then enter **your own** AgentContinuity agent API key when Claude Code asks for the plugin's sensitive "AgentContinuity API key" option; Claude Code keeps it in secure storage and sends it only to `https://api.agentcontinuity.net/mcp` as `Authorization: Bearer …`. No key ships in this repository. Never use a shared team key, an administrator key or an AI-provider key. See [claude/README.md](claude/README.md).
 
 - **Network endpoint:** `https://api.agentcontinuity.net/mcp` only (Streamable HTTP, operated by SapienCX LLC). No hooks, scripts, binaries, package installs or local servers.
 - **Skills:** `setup` (connect safely, start or troubleshoot) and `continuity` (save, retrieve and restore context safely).

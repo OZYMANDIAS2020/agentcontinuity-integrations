@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "agentcontinuity",
-      "source": "./",
+      "source": "./claude",
       "description": "Persistent memory, signed checkpoints and task handoffs for AI agents, using your own AgentContinuity account."
     }
   ]
