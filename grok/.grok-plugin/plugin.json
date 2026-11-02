@@ -1,6 +1,6 @@
 {
   "name": "agentcontinuity",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Persistent memory, signed checkpoints and task handoffs for AI agents, using your own AgentContinuity account through its hosted MCP server.",
   "author": {
     "name": "SapienCX LLC",

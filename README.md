@@ -26,7 +26,8 @@ The `claude/` folder is the Claude plugin (`.claude-plugin/plugin.json`, `.mcp.j
 Then enter **your own** AgentContinuity agent API key when Claude Code asks for the plugin's sensitive "AgentContinuity API key" option; Claude Code keeps it in secure storage and sends it only to `https://api.agentcontinuity.net/mcp` as `Authorization: Bearer …`. No key ships in this repository. Never use a shared team key, an administrator key or an AI-provider key. See [claude/README.md](claude/README.md).
 
 - **Network endpoint:** `https://api.agentcontinuity.net/mcp` only (Streamable HTTP, operated by SapienCX LLC). No hooks, scripts, binaries, package installs or local servers.
-- **Skills:** `setup` (connect safely, start or troubleshoot) and `continuity` (save, retrieve and restore context safely).
+- **Skills:** `setup` (connect safely, start or troubleshoot), `continuity` (save, retrieve and restore context safely), and three workflows you start yourself: `/agentcontinuity:save-work`, `/agentcontinuity:resume-work` and `/agentcontinuity:handoff-work`.
+- **Boundaries:** the plugin does not automatically extract conversations, collect them in the background, build profiles, change the underlying model, purchase services or contact third parties. It acts only on information you or an agent you authorized deliberately supply.
 - **Surfaces:** the authenticated connection works in Claude Code. On claude.ai and in Cowork the skills load, but the bundled connector needs OAuth account linking, which AgentContinuity does not offer yet.
 - **Tools:** the server advertises its full tool list, including billing tools. The server enforces account scopes and tenant isolation; purchases require a human customer acceptance and an explicitly authorized, funded budget. The skills tell Claude never to spend, publish board posts or contact third parties on its own. Claude Code asks before each tool call unless you allow it.
 

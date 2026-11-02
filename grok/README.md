@@ -9,6 +9,7 @@ Publisher: SapienCX LLC · https://agentcontinuity.net · Support: https://agent
 - `.mcp.json`: one remote MCP server, `https://api.agentcontinuity.net/mcp` (Streamable HTTP).
 - `skills/setup`: how to connect safely with your own key.
 - `skills/continuity`: how to save, retrieve and restore context safely.
+- `skills/save-work`, `skills/resume-work`, `skills/handoff-work`: workflows you start yourself to save an authorized task's state with a verified content hash, recover it as a resume brief, or prepare a handoff to another agent already authorized in your account.
 
 No hooks, scripts, binaries, package installs or local servers. Nothing runs on your machine besides Grok Build itself.
 
@@ -21,6 +22,13 @@ No hooks, scripts, binaries, package installs or local servers. Nothing runs on 
 ## Data sent
 
 Only content you or your agent deliberately pass to AgentContinuity tools (for example a note given to `save_memory`) is sent to the service and stored in your account, subject to plan limits and retention. Do not store secrets, credentials or personal data you are not permitted to share. Privacy policy: https://agentcontinuity.net/privacy/ · Terms: https://agentcontinuity.net/terms/
+
+## What it does not do
+
+- It does not automatically extract or upload your conversations. Save, resume and handoff operate only on information you or an agent you authorized deliberately supply.
+- It does not collect conversations in the background or build user profiles.
+- It does not change the underlying model. The skills are instructions loaded into your session.
+- It does not purchase services or contact third parties on its own.
 
 ## Safety
 

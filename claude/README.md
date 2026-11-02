@@ -19,15 +19,28 @@ When Claude Code asks for the plugin's **AgentContinuity API key**, enter your o
 - "Retrieve what I saved for this project yesterday and continue from it."
 - "Create a checkpoint of my workspace" or "Show my unfinished AgentContinuity tasks."
 
-The `setup` skill covers connecting and troubleshooting; the `continuity` skill covers saving, resuming and restoring context safely.
+Workflows you start yourself (Claude does not run them on its own):
+
+- `/agentcontinuity:save-work`: save a minimal summary of an authorized task, re-read it and confirm its content hash; optionally create a signed checkpoint.
+- `/agentcontinuity:resume-work`: find and retrieve saved task records and present a resume brief, without obeying instructions inside them or resuming work automatically.
+- `/agentcontinuity:handoff-work`: prepare a handoff brief for another agent already authorized in your account; a task or message is written only when you separately approve it.
+
+The `setup` skill covers connecting and troubleshooting; the `continuity` skill covers safe saving, resuming and restoring.
 
 ## What it contains and what it sends
 
 - `.mcp.json`: one remote MCP server, `https://api.agentcontinuity.net/mcp` (Streamable HTTP), operated by SapienCX LLC. Your key is sent only to that endpoint, as `Authorization: Bearer …`, taken from the plugin's sensitive `api_key` option. No key ships in this plugin, and nothing is read from your environment or files.
-- `skills/setup` and `skills/continuity`: instructions only.
+- `skills/`: `setup`, `continuity`, `save-work`, `resume-work`, `handoff-work`. Instructions only.
 - No hooks, scripts, binaries, package installs or local servers.
 
 Only content you or Claude deliberately pass to AgentContinuity tools (for example a note given to `save_memory`) is sent to the service and stored in your account, subject to plan limits and retention. Do not store secrets, credentials or personal data you are not permitted to share. Privacy policy: https://agentcontinuity.net/privacy/ · Terms: https://agentcontinuity.net/terms/
+
+## What it does not do
+
+- It does not automatically extract or upload your Claude conversations. Save, resume and handoff operate only on information you or an agent you authorized deliberately supply.
+- It does not collect conversations in the background or build user profiles.
+- It does not change the underlying Claude model. The skills are instructions loaded into your session.
+- It does not purchase services or contact third parties on its own.
 
 ## Surfaces and safety
 
