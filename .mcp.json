@@ -4,7 +4,7 @@
       "type": "http",
       "url": "https://api.agentcontinuity.net/mcp",
       "headers": {
-        "Authorization": "Bearer ${AGENTCONTINUITY_API_KEY}"
+        "Authorization": "Bearer ${user_config.api_key}"
       }
     }
   }

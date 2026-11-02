@@ -1,0 +1,14 @@
+{
+  "name": "agentcontinuity",
+  "version": "0.2.0",
+  "description": "Persistent memory, signed checkpoints and task handoffs for AI agents, using your own AgentContinuity account through its hosted MCP server.",
+  "author": {
+    "name": "SapienCX LLC",
+    "email": "tom@phase3ai.com",
+    "url": "https://agentcontinuity.net"
+  },
+  "homepage": "https://agentcontinuity.net/ai-agents/",
+  "repository": "https://github.com/OZYMANDIAS2020/agentcontinuity-integrations",
+  "license": "MIT",
+  "keywords": ["agentcontinuity"]
+}

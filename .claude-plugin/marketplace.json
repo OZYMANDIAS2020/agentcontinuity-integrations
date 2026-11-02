@@ -1,0 +1,15 @@
+{
+  "name": "agentcontinuity",
+  "owner": {
+    "name": "SapienCX LLC",
+    "email": "tom@phase3ai.com"
+  },
+  "description": "AgentContinuity plugins published by SapienCX LLC.",
+  "plugins": [
+    {
+      "name": "agentcontinuity",
+      "source": "./",
+      "description": "Persistent memory, signed checkpoints and task handoffs for AI agents, using your own AgentContinuity account."
+    }
+  ]
+}

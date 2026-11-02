@@ -1,12 +1,29 @@
 {
   "name": "agentcontinuity",
-  "version": "0.1.0",
-  "description": "Persistent memory, portable context and task handoffs for AI agents through REST and MCP.",
+  "displayName": "AgentContinuity",
+  "version": "0.2.0",
+  "description": "Persistent memory, signed checkpoints and task handoffs for AI agents, using your own AgentContinuity account through its hosted MCP server.",
   "author": {
     "name": "SapienCX LLC",
-    "email": "tom@phase3ai.com"
+    "email": "tom@phase3ai.com",
+    "url": "https://agentcontinuity.net"
   },
   "homepage": "https://agentcontinuity.net/ai-agents/",
+  "repository": "https://github.com/OZYMANDIAS2020/agentcontinuity-integrations",
   "license": "MIT",
-  "mcpServers": "./.mcp.json"
+  "keywords": ["agentcontinuity", "agent memory", "checkpoints", "context handoff"],
+  "icon": "./assets/icon-512.png",
+  "documentationUrl": "https://agentcontinuity.net/ai-agents/",
+  "supportUrl": "https://agentcontinuity.net/contact/",
+  "privacyPolicyUrl": "https://agentcontinuity.net/privacy/",
+  "termsOfServiceUrl": "https://agentcontinuity.net/terms/",
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "AgentContinuity API key",
+      "description": "Your own AgentContinuity agent API key. Stored in secure storage. Never use a shared, administrator or AI-provider key.",
+      "required": true,
+      "sensitive": true
+    }
+  }
 }
