@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-02",
+  "as_of": "2026-11-03",
   "public_mcp_url": "https://api.agentcontinuity.net/mcp",
   "platforms": {
     "chatgpt": {
@@ -29,7 +29,8 @@
       ],
       "consumer_gemini_listing": false,
       "repository": "https://github.com/OZYMANDIAS2020/agentcontinuity-integrations",
-      "gallery_listing_verified": false
+      "gallery_listing_verified": false,
+      "gallery_blocker": "geminicli.com crawls tagged repositories; this repository has no release tag yet"
     },
     "grok": {
       "status": "catalog_pr_submitted_awaiting_review",
@@ -58,28 +59,21 @@
       "listed": false
     },
     "meta_muse": {
-      "status": "submission_portal_verified_not_submitted",
-      "portal_url": "https://platform.muse.ai/",
-      "review_required": true,
-      "authenticated_portal_requirements_verified": false,
+      "status": "prepared_not_submitted",
+      "portal_url": "https://platform.muse.ai/submission",
+      "readiness": "docs/muse-connector-readiness.md",
+      "blocking_requirements": [
+        "per-user OAuth with a Read Only option (a connector-level API key would share one tenant)",
+        "company verification and Connector Platform Terms (publisher)",
+        "dedicated review test account"
+      ],
       "listed": false
     },
     "claude_plugin_directory": {
-      "status": "validated_draft_not_submitted",
-      "path": "claude",
-      "validated_commit": "58d280d",
-      "policy_holds": 0,
-      "remaining": [
-        "publisher Compliance attestations and submit (publisher action)",
-        "Anthropic review"
-      ],
-      "operational_surfaces": [
-        "Claude Code (per-user API key)"
-      ],
-      "oauth_required_surfaces": [
-        "claude.ai",
-        "Cowork"
-      ],
+      "status": "submitted_scan_passed_awaiting_anthropic_reviewer",
+      "submission_id": "d77f9b88-4e94-4301-b31a-8ad3a99cf683",
+      "version": "0.3.0",
+      "attestations": "accepted by the publisher's representative",
       "listed": false
     },
     "claude_code_marketplace": {
@@ -99,7 +93,7 @@
       "status": "prepared_not_submitted",
       "route": "Kimi Plugin Builder import of this repository (folder claude), then plugin page feedback form: Apply for official marketplace publication",
       "blocking_requirements": [
-        "publisher Kimi sign-in",
+        "publisher Kimi sign-in (kimi.com shows a login wall)",
         "in-app basic test"
       ],
       "listed": false
