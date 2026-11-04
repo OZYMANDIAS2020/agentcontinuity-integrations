@@ -3,7 +3,21 @@
   "mcpServers": {
     "agentcontinuity": {
       "type": "streamable-http",
-      "url": "https://api.agentcontinuity.net/mcp"
+      "url": "https://api.agentcontinuity.net/mcp/openai",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "cimd"
+            },
+            "resource": "https://api.agentcontinuity.net/mcp/openai",
+            "baseScopes": [
+              "memory:read"
+            ]
+          }
+        }
+      }
     }
   }
 }
