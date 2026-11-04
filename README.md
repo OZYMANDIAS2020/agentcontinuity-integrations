@@ -37,7 +37,7 @@ The `grok/` folder is the Grok Build plugin (`.grok-plugin/plugin.json`, `.mcp.j
 
 ## ChatGPT and Claude connector directories
 
-The portable `plugin.json` and `mcp.json` are preparation artifacts, not an approved listing. A stand-alone connector listing (ChatGPT apps, Claude connector directory) needs per-user OAuth account linking; AgentContinuity currently uses per-agent bearer API keys. **Those submissions are held until a separately tested, secure OAuth implementation exists.** `docs/openai-auth.json` records the current fixed-bearer scheme separately because the portable schema and OpenAI overlay have different validation rules.
+The root `plugin.json`, `mcp.json` and `skills/agentcontinuity/SKILL.md` are an **OpenAI public plugin candidate**, not an uploaded, approved, or published listing. It connects only to the separate non-commerce, 17-tool `https://api.agentcontinuity.net/mcp/openai` service using OAuth (CIMD preference), **not** the legacy 55-tool bearer-key endpoint. The OAuth implementation is already deployed but remains disabled pending business publisher identity verification, exact portal client/callback allowlisting, a controlled live ChatGPT/Codex handshake, and review. The former `docs/openai-auth.json` describes the legacy fixed-bearer service only; do not use it for this plugin. See [OpenAI release gate](docs/openai-plugin-release-gate.md).
 
 ## Gemini app, Meta/Muse and Grok
 
@@ -45,7 +45,7 @@ Google's Connected Apps Platform provides a preview application and review/publi
 
 Grok Build's plugin catalog accepts reviewed pull requests to https://github.com/xai-org/plugin-marketplace that pin a public commit of this repository; the `grok/` folder is that plugin. A catalog pull request is an application for review, not a listing. See `docs/directory-rollout.md` for current routes and remaining work.
 
-OpenAI's directory currently permits access to features in an existing paid account but prohibits selling digital services or credits through plugins. A future ChatGPT connector must expose a focused memory/coordination tool surface without purchase or checkout operations; changing this README or hiding buttons is not server-side enforcement. The current shared MCP endpoint still advertises all 55 service tools and is not ready for that submission.
+OpenAI's directory currently permits access to existing paid-account entitlements but prohibits selling digital subscriptions, services or credits (including indirect freemium upsells) through plugins. The public plugin candidate uses a separate server-enforced 17-tool, non-commerce OAuth surface; the general-purpose 55-tool endpoint remains for independent clients, **not** for OpenAI's directory. No checkout links, upgrade promotions or selling flows belong inside the plugin.
 
 ## Usage examples
 
