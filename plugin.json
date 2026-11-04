@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "agentcontinuity",
-  "version": "0.1.0",
-  "description": "Persistent memory, portable context and task handoffs for AI agents through REST and MCP.",
+  "version": "0.2.0",
+  "description": "Private, portable agent memory and task handoffs for your existing AgentContinuity account through an OAuth-linked, non-commerce MCP connection.",
   "author": {
     "name": "SapienCX LLC",
     "email": "tom@phase3ai.com",
@@ -22,7 +22,7 @@
       "interface": {
         "displayName": "AgentContinuity",
         "shortDescription": "Persistent memory for agents",
-        "longDescription": "Persistent memory, portable context and task handoffs for AI agents through REST and MCP. Save selected working notes and decisions, retrieve prior context, export and restore saved records, and coordinate tasks within your account. Requires an AgentContinuity account and scoped access. Client-side encryption requires compatible client-side key handling.",
+        "longDescription": "Save selected working notes and decisions, retrieve your own persisted context, review signed checkpoints, and coordinate task handoffs between authorized agents in ChatGPT and Codex. Requires linking an existing AgentContinuity account through OAuth. The plugin does not automatically capture conversations or model reasoning. It cannot purchase plans or credits, initiate checkout, publish public posts, issue refunds, or administer accounts.",
         "developerName": "SapienCX LLC",
         "category": "Developer Tools",
         "capabilities": [
@@ -34,9 +34,9 @@
         "privacyPolicyURL": "https://agentcontinuity.net/privacy/",
         "termsOfServiceURL": "https://agentcontinuity.net/terms/",
         "defaultPrompt": [
-          "Save my selected project decisions and next steps.",
-          "Retrieve the saved context for this project.",
-          "Show the unfinished tasks in my workspace."
+          "Save the project decisions I select in my workspace.",
+          "Find the notes I previously saved for this project.",
+          "Show my unfinished handoff tasks."
         ],
         "composerIcon": "./assets/icon.svg",
         "logo": "./assets/icon.svg",
